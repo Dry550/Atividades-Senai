@@ -1,0 +1,36 @@
+#define pinLedVermelhoA 13
+#define pinLedAmareloA 12
+#define pinLedVerdeA 11
+#define pinLedVermelhoB 4
+#define pinLedAmareloB 3
+#define pinLedVerdeB 2
+
+void setup()
+{
+ pinMode(pinLedVermelhoA, OUTPUT);
+ pinMode(pinLedAmareloA, OUTPUT);
+ pinMode(pinLedVerdeA, OUTPUT);
+ pinMode(pinLedVermelhoB, OUTPUT);
+ pinMode(pinLedAmareloB, OUTPUT);
+ pinMode(pinLedVerdeB, OUTPUT);
+}
+void loop()
+{
+ digitalWrite(pinLedVermelhoA, HIGH);
+ digitalWrite(pinLedVerdeB, HIGH);
+ delay(5000); 
+ digitalWrite(pinLedVerdeB, LOW);
+ digitalWrite(pinLedAmareloB, HIGH);
+ delay(3000);
+ digitalWrite(pinLedAmareloB, LOW);
+ digitalWrite(pinLedVermelhoA, LOW);
+ digitalWrite(pinLedVermelhoB, HIGH);
+ digitalWrite(pinLedVerdeA, HIGH);
+ delay(3000);
+ digitalWrite(pinLedAmareloA, HIGH);
+ digitalWrite(pinLedVerdeA, LOW);
+ delay(5000);
+ digitalWrite(pinLedVermelhoB, LOW);
+ digitalWrite(pinLedVerdeB, LOW);
+ digitalWrite(pinLedAmareloA, LOW);
+}
