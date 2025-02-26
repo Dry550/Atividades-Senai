@@ -1,0 +1,92 @@
+/*
+Nome do arquivo:Exercicios matematicos
+Autor:Adryelle De Souza
+Data:25/02/2025
+Descrição:
+*/
+
+int numeroA = 0;
+int numeroB = 0;
+int resultado = 0;
+int resultadoReal = 0;
+
+void setup()
+{
+Serial.begin(9600);//baud rate bit's por segundo (bps)
+  
+  //EXERCICIO 1
+  resultado = map(200, 0, 1023, 0, 100);
+  Serial.println(resultado);
+  
+  resultadoReal = constrain(resultado, 20, 80);
+  Serial.println(resultadoReal);
+  
+  
+  //EXERCICIO 2
+ int contador = 0;
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+ Serial.println(contador);
+ contador++;
+  
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+ Serial.println(contador);
+ contador--;
+  
+ 
+ //EXERCICIO 3
+ 
+ float valor1 = 4;
+ float valor2 = 8;
+  
+ float resultadoMedia = 0;
+  
+ resultadoMedia = (valor1 + valor2) / 2;
+  
+ Serial.println(resultadoMedia);
+ 
+ 
+
+}
+
+void loop()
+{
+  
+}
