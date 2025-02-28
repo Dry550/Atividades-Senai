@@ -1,0 +1,40 @@
+/*
+Nome do arquivo:Estrutura de decisão
+Autor:Adryelle De Souza
+Data:26/02/2025
+Descrição:IMC
+*/
+
+void setup()
+{
+ Serial.begin(9600); 
+ float altura = 1.75;
+ float peso = 71.5;
+ float resultadoReal = 0;
+  
+ float imc = peso / sq  (altura);
+  Serial.println(resultadoReal);
+  if(imc < 18.5){
+    Serial.println("Abaixo do peso");
+    
+  }else if(imc >= 18.5 && imc < 24.9){
+    Serial.println("Peso normal");
+      
+  }else if(imc >= 25 && imc < 29.9){
+    Serial.println("Acima do peso");
+    
+  }else if (imc >= 30 && imc < 34.9){
+     Serial.println("Obesidade I");
+    
+  }else if (imc >= 35 && imc < 39.9){
+     Serial.println("Obesidade II");
+    
+  }else{
+    Serial.println("Obesidade III");  
+  
+  }
+  }
+  
+void loop()
+ {
+ }
