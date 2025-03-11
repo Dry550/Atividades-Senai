@@ -1,0 +1,38 @@
+/*
+Autor:Adryelle Souza
+Nome do arquivo:Logica
+Data: 07/03/2025
+Descrição: Piscar led sem delay
+*/
+
+#define pinLedVermelho 13
+
+unsigned long tempoInicial = 0;
+bool estadoLed = 0;
+
+void setup()
+{
+ Serial.begin(9600);
+ pinMode(pinLedVermelho , OUTPUT);  
+}
+
+void loop()
+{
+	unsigned long tempoAtual = millis();
+  
+  if (tempoAtual-tempoInicial >=1000){
+    
+  	//caso sim
+  if(estadoLed);
+    
+    if(estadoLed){
+    digitalWrite(pinLedVermelho , LOW);
+      estadoLed = 0;
+    }
+    else {
+    digitalWrite(pinLedVermelho , HIGH);
+      estadoLed = 1;
+    }
+    tempoInicial = tempoAtual;
+  }
+}

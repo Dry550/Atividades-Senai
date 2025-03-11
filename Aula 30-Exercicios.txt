@@ -1,0 +1,67 @@
+/*
+Nome do arquivo:Exercicos Switch Case
+Autor:Adryelle De Souza
+Data:06/03/2025
+Descrição:
+*/
+
+#define pinLedVermelho 13
+#define pinLedLaranja 12
+#define pinLedAmarelo 11
+#define pinLedAzul 10
+#define pinLedVerde 9
+
+void setup()
+{
+  Serial.begin(9600);
+
+pinMode(pinLedVermelho , OUTPUT);
+pinMode(pinLedLaranja , OUTPUT);
+pinMode(pinLedAmarelo , OUTPUT);
+pinMode(pinLedAzul , OUTPUT);
+pinMode(pinLedVerde , OUTPUT);
+  
+int temperatura = 0;
+  
+switch (temperatura)
+ {
+case 0:
+  digitalWrite (pinLedVermelho, HIGH);
+  Serial.println("O ar esta pessimo");
+  break;
+  
+case 1:
+  digitalWrite (pinLedLaranja, HIGH);
+  Serial.println("O ar esta ruim");
+  break;
+  
+case 2:
+  digitalWrite (pinLedAmarelo, HIGH);
+  Serial.println("O ar esta normal");
+  break;
+  
+case 3:
+  digitalWrite (pinLedAzul, HIGH);
+  Serial.println("O ar esta bom");
+  break;
+  
+case 4:
+  digitalWrite (pinLedVerde, HIGH);
+  Serial.println("O ar esta excelente");
+  
+default:
+  serial
+  
+}
+  
+
+  
+  
+  
+  
+}
+
+void loop()
+{
+  
+}
