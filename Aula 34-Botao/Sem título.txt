@@ -1,0 +1,53 @@
+/*
+Autor:Adryelle Souza
+Nome do arquivo:Botao
+Data: 11/03/2025
+Descrição: 
+*/
+
+#define pinBotao 10
+#define pinLed 2
+#define tempoLigado 500
+
+/// VARIAVEIS GLOBAIS ///
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinBotao, INPUT);
+}
+
+unsigned long tempoInicial = 0;
+bool estadoLed = 0;
+
+void loop()
+{
+ // digitalWrite(pinLed, HIGH);
+  digitalRead(pinBotao);
+  
+ bool estadoBotao = digitalRead(pinBotao);
+ Serial.println(estadoBotao);
+ 
+  if(estadoBotao){
+
+    unsigned long tempoAtual = millis();
+  
+  if (tempoAtual-tempoInicial >=500){
+    
+  if(estadoLed);
+    
+    if(estadoLed){
+    digitalWrite(pinLed , LOW);
+      estadoLed = 0;
+    }
+    else {
+    digitalWrite(pinLed , HIGH);
+      estadoLed = 1;
+    }
+    tempoInicial = tempoAtual;
+  }
+  
+  }
+     
+ }
