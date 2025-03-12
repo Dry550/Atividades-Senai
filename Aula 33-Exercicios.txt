@@ -1,0 +1,64 @@
+/*
+Autor:Adryelle Souza
+Nome do arquivo:Semaforo
+Data: 10/03/2025
+Descrição: Semaforo sem delay
+*/
+
+#define pinLedVermelho 13
+#define pinLedAmarelo 12
+#define pinLedVerde 11
+
+unsigned long tempoInicial = 0;
+int etapaSemaforo = 0;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(pinLedVermelho , OUTPUT);
+  pinMode(pinLedAmarelo , OUTPUT);
+  pinMode(pinLedVerde , OUTPUT);
+}
+
+void loop()
+{
+  unsigned long tempoAtual = millis();
+  
+  if(etapaSemaforo == 0){
+    digitalWrite(pinLedAmarelo , LOW);
+    digitalWrite(pinLedVermelho , HIGH); 
+    
+    if (tempoAtual-tempoInicial >=5000){
+      etapaSemaforo = 1;
+      tempoInicial = tempoAtual; 
+    }
+  	
+    
+    
+    
+  }else if(etapaSemaforo == 1){
+    digitalWrite(pinLedVermelho , LOW);
+    digitalWrite(pinLedVerde , HIGH);
+    
+    if(tempoAtual-tempoInicial >=3000){
+    etapaSemaforo = 2;
+    tempoInicial = tempoAtual;
+    }
+    
+    
+    
+    
+  }else if (etapaSemaforo == 2){
+    digitalWrite(pinLedVerde , LOW);
+    digitalWrite(pinLedAmarelo , HIGH);
+    
+    if(tempoAtual-tempoInicial >=2000){
+    etapaSemaforo = 0;
+    tempoInicial = tempoAtual;
+   
+    } 
+  
+  }
+    
+}
+  
