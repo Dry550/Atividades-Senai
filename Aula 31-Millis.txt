@@ -1,0 +1,26 @@
+/*
+Nome do arquivo:
+Autor:Adryelle De Souza
+Data:06/03/2025
+Descrição:
+*/
+
+#define pinLedVermelho 13
+#define pinLedAmarelo 12
+#define pinLedVerde 11
+
+
+
+
+unsigned long tempo;
+
+void setup()
+{
+ Serial.begin(9600);
+}
+
+void loop()
+{
+ tempo = millis();
+ Serial.println(tempo);
+}
